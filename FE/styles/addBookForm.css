@@ -22,3 +22,27 @@
   border: none;
   border-radius: 5px 5px 5px 5px;
 }
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background: none;
+  box-shadow: none;
+}
+.css-1wnsr1i {
+  box-shadow: none;
+}
+#publishedDate {
+  width: 150px;
+  height: 30px;
+}
+.delete {
+  width: 250px;
+  justify-content: space-around;
+  display: flex;
+}
+.delete button {
+  width: 50px;
+  height: 30px;
+  background: red;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+}

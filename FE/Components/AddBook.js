@@ -19,6 +19,7 @@ const style = {
 
 export default function AddBook() {
   const [open, setOpen] = React.useState(false);
+  const [result, setResult] = React.useState();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -36,13 +37,16 @@ export default function AddBook() {
         name: name,
         isbn: isbn,
         author: author,
-        publisher: publishedDate,
-        price: price,
+        publisher: publisher,
         publishedDate: publishedDate,
+        price: price,
       })
       .then((res) => {
-        console.log(res.data);
+        setResult(res.data);
+        location.reload();
       });
+
+    console.log(result);
   };
 
   return (
@@ -63,9 +67,9 @@ export default function AddBook() {
               <TextField fullWidth label="Author" id="fullWidth" />
               <TextField fullWidth label="ISBN" id="fullWidth" />
               <TextField fullWidth label="Publisher" id="fullWidth" />
-              <TextField fullWidth label="Published on" id="fullWidth" />
-              <button type="submit">Log In</button>
-              <p className="result"></p>
+              <input type="date" name="publishedDate" id="publishedDate" />
+              <button type="submit">Add</button>
+              <p className="result">{result?.message}</p>
             </form>
           </div>
         </Box>
