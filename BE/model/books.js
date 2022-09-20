@@ -7,10 +7,13 @@ const BooksSchema = new Schema({
   isbn: {
     type: String,
   },
-  creator: {
+  author: {
     type: String,
   },
-  publishDate: {
+  publisher: {
+    type: String,
+  },
+  publishedDate: {
     type: Date,
   },
   price: {
